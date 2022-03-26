@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'real_estate.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'real_estate.settings.development')
     try:
         from django.core.management.commands.runserver import Command as runserver
         runserver.default_port = "1985"
