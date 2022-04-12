@@ -86,6 +86,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "real_estate.wsgi.application"
 
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8003', 'http://127.0.0.1:8003']
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
