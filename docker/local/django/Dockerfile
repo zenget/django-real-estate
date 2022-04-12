@@ -1,14 +1,13 @@
-FROM python:3.8.10-slim-buster
+FROM python:3.10.0-slim-buster
 
 ENV APP_HOME=/app
 RUN mkdir $APP_HOME
 RUN mkdir $APP_HOME/staticfiles
 WORKDIR $APP_HOME
 
-LABEL maintainer='contact.geeztechnology@gmail.com'
-LABEL youtube="https://studio.youtube.com/channel/UCskal5PHN6M7JvI08SwCCHQ"
-LABEL description="Development image for Real Estate Project"
-
+LABEL maintainer='api.imperfect@gmail.com'
+LABEL youtube="https://www.youtube.com/c/APIImperfect"
+LABEL decription="Development image for Real Estate Project"
 
 ENV PYTHONDONTWRITEBYTECODE 1
 
@@ -35,7 +34,5 @@ RUN chmod +x /entrypoint
 COPY ./docker/local/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
-
-
 
 ENTRYPOINT [ "/entrypoint"]
